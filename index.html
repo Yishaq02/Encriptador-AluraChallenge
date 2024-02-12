@@ -15,7 +15,7 @@
 
         <section class="area1">
             <div class="texto-area">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="texto" cols="30" rows="10"></textarea>
             </div>
             
             <div class="restricciones">
@@ -23,8 +23,8 @@
             </div>
 
             <div class="botones">
-                <input type="button" id="btn1" class="boton">
-                <input type="button" id="btn2" class="boton">
+                <input onclick="filtro(texto.value);" type="button" id="btn1" class="boton" value="Encriptar">
+                <input type="button" id="btn2" class="boton" value="Desencriptar">
             </div>
         </section>
 
@@ -34,7 +34,7 @@
                 <img src="imagenes/Muñeco.png" alt="">
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-                <input type="button" id="btn2" class="boton">
+                <input type="button" id="btn2" class="boton" value="Copiar">
             </div>
         </section>
 
@@ -45,6 +45,8 @@
         <a href="https://github.com"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
         <a href=""><i style="font-size:24px" class="fa">&#xf08c;</i></a>
     </footer>
+
+    <script src="app.js"></script>
     
 </body>
 </html>
