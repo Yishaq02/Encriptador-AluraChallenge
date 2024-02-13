@@ -1,10 +1,27 @@
 let tencriptado = "";
 let tdesencriptado = "";
 
-// function textofinal(text){
-//     var e = document.getElementById("textfinal");
-//     e.value(text);
-// }
+function copiar(){
+    let copyText = document.querySelector("#input");
+    copyText.select();
+    document.execCommand("copy");
+
+    document.querySelector("#copy").addEventListener("click", copy);
+}
+
+function textofinal(text){
+    // let img = document.getElementById('img.imgMuñeco');
+    // img.remove(); 
+
+    // // let img = document.querySelector('img.imgMuñeco').remove;
+    // // img.remove;
+    let h2 = document.querySelector('h2.textfinal');
+    h2.innerHTML = "";
+
+    let header = document.querySelector('p.textfinal');
+    header.innerHTML = text;
+    return;
+}
 
 function encriptar(text){
     
@@ -16,7 +33,7 @@ function encriptar(text){
     text = text.replaceAll("u", 'ufat');   
     console.log(text);
     tencriptado = text;
-    // textofinal(tencriptado);
+    textofinal(tencriptado);
 
     return tencriptado;
 }
@@ -30,7 +47,7 @@ function desencriptar(text){
         text = text.replaceAll("ober", 'o');
         text = text.replaceAll("ufat", 'u');   
         tdesencriptado = text;
-        // textofinal(tdesencriptado);
+        textofinal(tdesencriptado);
         return console.log(text);  
         
     }else{
@@ -69,29 +86,3 @@ function filtro(text) {
 function limpiarCaja() {
     document.querySelector('#texto').value = '';
 }
-
-
-// switch(text.charAt(i)){
-//     case "e":
-//         console.log("Test 1:");
-//         text.replace("e","enter");
-//         break;
-//     case "i":
-//         console.log("Test 2:");
-//         text.replace("i","imes");
-//         break;
-//     case "a":
-//         console.log("Test 3:");
-//         text.replace("a","ai");
-//         break;
-//     case "o":
-//         console.log("Test 4:");
-//         text.replace("o","ober");
-//         break;
-//     case "u":
-//         console.log("Test 5:");
-//         text.replace("u","ufat")
-//         break;
-//     default:
-//     console.log("No se recibio nada");
-// }
