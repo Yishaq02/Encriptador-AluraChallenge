@@ -1,0 +1,70 @@
+/* HEADER */
+header{
+    margin: 0 auto;
+    text-align: left;
+}
+
+header img{
+    padding: 10px;   
+}
+
+main{
+    margin-left: 0px;
+}
+
+/* TEXTO AREA */
+
+.area1{
+    margin: 0 auto;
+    text-align: center;
+}
+.area1 .texto-area textarea{
+    /* max-width: 50%; */
+    border-radius: 10%;
+    border: 1px solid #ccc;
+    width: 20%;
+    height: 100%;
+}
+
+.area1 .texto-area{
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* RESTRICCIONES */
+
+.restricciones{
+    padding-bottom: 10px;
+}
+
+.restricciones p{
+    color: blue;
+    font-size: 15px;
+}
+
+/* Bottons */
+
+.botones input{
+    width: 25%;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    background: blue;
+}
+
+.botones input:hover{
+    background: green;
+}
+
+/* area 2 */
+
+.area2 {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+.area2 .rectangulo{
+    scale: 0.8;
+}

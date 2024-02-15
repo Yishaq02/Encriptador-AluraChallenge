@@ -1,13 +1,35 @@
 let tencriptado = "";
 let tdesencriptado = "";
 
-function copiar(){
-    let copyText = document.querySelector("#input");
-    copyText.select();
-    document.execCommand("copy");
+// navigator.clipboard.writeText("Este es el texto a copiar")
+// .then(() => {
+//   console.log('Contenido copiado al portapapeles');
+//   /* Resuelto - texto copiado al portapapeles con éxito */
+// },() => {
+//   console.error('Error al copiar');
+//   /* Rechazado - fallo al copiar el texto al portapapeles */
+// });
 
-    document.querySelector("#copy").addEventListener("click", copy);
-}
+// async function copiarContenido() {
+//     try {
+//       await navigator.clipboard.writeText('Este es el texto a copiar');
+//       console.log('Contenido copiado al portapapeles');
+//       /* Resuelto - texto copiado al portapapeles con éxito */
+//     } catch (err) {
+//       console.error('Error al copiar: ', err);
+//       /* Rechazado - fallo al copiar el texto al portapapeles */
+//     }
+//   }
+
+let texto = document.getElementById('texto').innerHTML;
+  const copiarContenido = async () => {
+    try {
+      await navigator.clipboard.writeText(texto);
+      console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  }
 
 function textofinal(text){
     // let img = document.getElementById('img.imgMuñeco');
