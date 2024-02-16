@@ -21,15 +21,15 @@ let tdesencriptado = "";
 //     }
 //   }
 
-let texto = document.getElementById('texto').innerHTML;
-  const copiarContenido = async () => {
-    try {
-      await navigator.clipboard.writeText(texto);
-      console.log('Contenido copiado al portapapeles');
-    } catch (err) {
-      console.error('Error al copiar: ', err);
-    }
-  }
+// let texto = document.getElementById('texto').innerHTML;
+//   const copiarContenido = async () => {
+//     try {
+//       await navigator.clipboard.writeText(texto);
+//       console.log('Contenido copiado al portapapeles');
+//     } catch (err) {
+//       console.error('Error al copiar: ', err);
+//     }
+//   }
 
 function textofinal(text){
     // let img = document.getElementById('img.imgMuñeco');

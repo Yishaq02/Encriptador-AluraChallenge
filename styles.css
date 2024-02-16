@@ -5,52 +5,89 @@ header{
 }
 
 header img{
+    margin-top: 20px;
     padding: 10px;   
 }
 
 main{
-    margin-left: 0px;
+    width: 100%;
+    /* width: 100%; */
+   
+    /* background: #000000; */
 }
 
 /* TEXTO AREA */
 
+/* div{
+    vertical-align: top;
+} */
+
 .area1{
-    margin: 0 auto;
-    text-align: center;
-}
-.area1 .texto-area textarea{
-    /* max-width: 50%; */
-    border-radius: 10%;
-    border: 1px solid #ccc;
-    width: 20%;
-    height: 100%;
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    height: 1300px;
+    /* margin: 0 auto;
+    text-align: center; */
 }
 
+.texto-area #texto{
+    font-size: 40px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 700px;
+}
+/* .texto-area{
+    vertical-align: top;
+} */
+
+/* .area1 .texto-area{
+    vertical-align: top;
+} */
+
+/* .area1 .texto-area textarea{
+    
+    vertical-align: top;
+} */
+/* 
 .area1 .texto-area{
     display: block;
     margin-bottom: 10px;
-}
+} */
 
 /* RESTRICCIONES */
 
 .restricciones{
     padding-bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .restricciones p{
     color: blue;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 /* Bottons */
 
-.botones input{
+.botones{
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.botones .boton{
+    
     width: 25%;
     height: 40px;
     color: #ffffff;
     border-radius: 10px;
     border: 1px solid #ffffff;
     background: blue;
+    vertical-align: bottom;
 }
 
 .botones input:hover{
@@ -60,11 +97,45 @@ main{
 /* area 2 */
 
 .area2 {
+    width: 40%;
+    display: inline-block;
     margin: 0 auto;
     text-align: center;
-    max-width: 100%;
+    margin-top: 30px;
+    /* max-width: 100%; */
 }
 
-.area2 .rectangulo{
-    scale: 0.8;
+.rectangulo{
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+}
+
+.muñeco{
+    /* position: absolute; */
+    z-index: 1;
+    display: inline-block;
+}
+
+.h2texto{
+    /* position: absolute; */
+    z-index: 1;
+    display: inline-block;
+}
+
+.copiar{
+    /* position: absolute; */
+    z-index: 1;
+    display: inline-block;
+}
+
+
+footer{
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ccc0cc;
+}
+
+footer p{
+    font-size: 20px;
 }
