@@ -31,13 +31,32 @@ let tdesencriptado = "";
 //     }
 //   }
 
+function copiarContenido() {
+
+    const destination = document.getElementById("texto2");
+
+    destinationImage.addEventListener("click", () => {
+      navigator.clipboard
+        .readText()
+        .then((clipText) => (destination.innerText = clipText));
+    });
+    // navigator.clipboard.readText()
+    // navigator.clipboard.readText().then(
+    //     (clipText) => (document.querySelector("p.textfinal").innerText += clipText),
+    //   );
+}
+
+// navigator.clipboard.readText().then(
+//     (clipText) => (document.querySelector("p.textfinal").innerText += clipText),
+//   );
+
 function textofinal(text){
     // let img = document.getElementById('img.imgMuñeco');
     // img.remove(); 
 
     // // let img = document.querySelector('img.imgMuñeco').remove;
     // // img.remove;
-    let h2 = document.querySelector('h2.textfinal');
+    let h2 = document.querySelector('p.textfinal');
     h2.innerHTML = "";
 
     let header = document.querySelector('p.textfinal');
