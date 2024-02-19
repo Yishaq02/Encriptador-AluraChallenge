@@ -138,6 +138,7 @@ main{
     position: absolute;
     z-index: 1;
     /* display: inline-block; */
+    visibility: visible;
 
     width: 259.2px;
     height: 259.2px;

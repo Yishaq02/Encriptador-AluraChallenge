@@ -33,6 +33,12 @@ let tdesencriptado = "";
 
 function copiarContenido() {
 
+    let texto = document.getElementById("texto2");
+    let botton = document.getElementById("input");
+
+    navigator.clipboard.writeText(texto.textContent);
+    botton.textContent = "Copiado";
+
     const destination = document.getElementById("texto2");
 
     destinationImage.addEventListener("click", () => {
@@ -51,11 +57,10 @@ function copiarContenido() {
 //   );
 
 function textofinal(text){
-    // let img = document.getElementById('img.imgMuñeco');
-    // img.remove(); 
+    // Agregar excepciones
+    let vista = document.getElementById("m_neco");
+    vista.setAttribute("style",'visibility: hidden;');
 
-    // // let img = document.querySelector('img.imgMuñeco').remove;
-    // // img.remove;
     let h2 = document.querySelector('p.textfinal');
     h2.innerHTML = "";
 
