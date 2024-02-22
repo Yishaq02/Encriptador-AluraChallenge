@@ -12,13 +12,23 @@
 
     
 
-    <header>
+    <header class="header">
         <img class="Logo" src="imagenes/Logo.png" alt="">
     </header>
-    <main>
+    <main class="main">
+        <section class="intro">
+            <video src="videos/smoke.mp4" autoplay muted></video>
+            <h1>
+                <span>A</span>
+                <span>L</span>
+                <span>U</span>
+                <span>R</span>
+                <span>A</span>
+            </h1>
+        </section>
         <section class="area1">
             <div class="texto-area">
-                <textarea name="" id="texto" cols="30" rows="10"></textarea>
+                <textarea placeholder="Ingrese un texto" name="" id="texto" cols="30" rows="10"></textarea>
             </div>
             
             <div class="restricciones">
@@ -26,8 +36,8 @@
             </div>
 
             <div class="botones">
-                <input onclick="filtro(texto.value);" type="button" id="btn1" class="boton" value="Encriptar">
-                <input onclick="desencriptar(texto.value);" type="button" id="btn2" class="boton" value="Desencriptar">
+                <input onclick="btnEncriptar(texto.value);" type="button" id="btn1" class="boton" value="Encriptar">
+                <input onclick="btnDesencriptar(texto.value);" type="button" id="btn2" class="boton" value="Desencriptar">
             </div>
         </section>
 
@@ -42,7 +52,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&#9824; Code by Isaac Atilano</p>
         <a href="https://github.com"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
         <a href=""><i style="font-size:24px" class="fa">&#xf08c;</i></a>

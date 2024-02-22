@@ -1,134 +1,154 @@
+// Declaramos las variables que utilizaremos para almacenar 
+// el texto encriptado y desencriptado
 let tencriptado = "";
 let tdesencriptado = "";
-
-// navigator.clipboard.writeText("Este es el texto a copiar")
-// .then(() => {
-//   console.log('Contenido copiado al portapapeles');
-//   /* Resuelto - texto copiado al portapapeles con éxito */
-// },() => {
-//   console.error('Error al copiar');
-//   /* Rechazado - fallo al copiar el texto al portapapeles */
-// });
-
-// async function copiarContenido() {
-//     try {
-//       await navigator.clipboard.writeText('Este es el texto a copiar');
-//       console.log('Contenido copiado al portapapeles');
-//       /* Resuelto - texto copiado al portapapeles con éxito */
-//     } catch (err) {
-//       console.error('Error al copiar: ', err);
-//       /* Rechazado - fallo al copiar el texto al portapapeles */
-//     }
-//   }
-
-// let texto = document.getElementById('texto').innerHTML;
-//   const copiarContenido = async () => {
-//     try {
-//       await navigator.clipboard.writeText(texto);
-//       console.log('Contenido copiado al portapapeles');
-//     } catch (err) {
-//       console.error('Error al copiar: ', err);
-//     }
-//   }
-
-function copiarContenido() {
-
-    let texto = document.getElementById("texto2");
-    let botton = document.getElementById("input");
-
-    navigator.clipboard.writeText(texto.textContent);
-    botton.textContent = "Copiado";
-
-    const destination = document.getElementById("texto2");
-
-    destinationImage.addEventListener("click", () => {
-      navigator.clipboard
-        .readText()
-        .then((clipText) => (destination.innerText = clipText));
-    });
-    // navigator.clipboard.readText()
-    // navigator.clipboard.readText().then(
-    //     (clipText) => (document.querySelector("p.textfinal").innerText += clipText),
-    //   );
+// desiniciador();
+iniciador();
+// Aqui iniciamos la pagina
+function iniciador(){
+    let header = document.querySelector("header.header");
+    let main = document.querySelector("main.main");
+    let footer = document.querySelector("footer.footer")
+    let letras = document.querySelector("section.intro");
+    // let vista = document.getElementById("m_neco");
+    header.setAttribute("style",'visibility: hidden;');
+    main.setAttribute("style",'visibility: hidden;');
+    footer.setAttribute("style",'visibility: hidden;');
+    letras.setAttribute("style",'visibility: visible;');
 }
 
-// navigator.clipboard.readText().then(
-//     (clipText) => (document.querySelector("p.textfinal").innerText += clipText),
-//   );
 
-function textofinal(text){
-    // Agregar excepciones
-    let vista = document.getElementById("m_neco");
-    vista.setAttribute("style",'visibility: hidden;');
-
-    let h2 = document.querySelector('p.textfinal');
-    h2.innerHTML = "";
-
-    let header = document.querySelector('p.textfinal');
-    header.innerHTML = text;
-    return;
+function desiniciador(){
+    let letras = document.querySelector("section.intro");
+    letras.setAttribute("style",'height: 1px;')
 }
-
+// declaramos la funcion de el boton encriptar
+function btnEncriptar(text){
+    // Adicionamos un filtro para evitar el ingreso de textos 
+    // en blanco
+    if(filtro(text)){
+        if(encriptar(text)){
+            // si cumple las condiciones cambiamos el texto con la
+            // funcion textofinal()
+            textofinal(tencriptado);
+            // limpiamos la caja del texto
+            limpiarCaja();
+        }
+    }
+}
+// declaramos la funcion de el boton desencriptar
+function btnDesencriptar(text){
+    // Adicionamos un filtro para evitar el ingreso de textos 
+    // en blanco
+    if(desencriptar(text)){
+        // console.log("Si continua")
+        // si cumple las condiciones cambiamos el texto con la
+        // funcion textofinal()
+        textofinal(tdesencriptado);
+        // limpiamos la caja del texto
+        limpiarCaja();
+    }
+}
+// Declaramos la funcion encriptar con el argumento text
 function encriptar(text){
-    
-    console.log(text);
-    text = text.replaceAll("e", 'enter');
-    text = text.replaceAll("i", 'imes');
-    text = text.replaceAll("a", 'ai');
-    text = text.replaceAll("o", 'ober');
-    text = text.replaceAll("u", 'ufat');   
-    console.log(text);
-    tencriptado = text;
-    textofinal(tencriptado);
-
-    return tencriptado;
-}
-
-function desencriptar(text){
+    // Adicionamos un filtro para evitar el ingreso de textos 
+    // en blanco
     if(text != ""){
-        console.log(text);
+        // console.log(text);
+        text = text.replaceAll("e", 'enter');
+        text = text.replaceAll("i", 'imes');
+        text = text.replaceAll("a", 'ai');
+        text = text.replaceAll("o", 'ober');
+        text = text.replaceAll("u", 'ufat');   
+        // console.log(text);
+        tencriptado = text;
+        return tencriptado;
+        
+    }else{
+        // mandamos un alert en caso de que no haya ningun texto
+        // que encriptar
+        return alert("Ingresa un mensaje"),true;
+    }
+}
+// Declaramos la funcion desencriptar con el argumento text
+function desencriptar(text){
+    // Adicionamos un filtro para evitar el ingreso de textos 
+    // en blanco
+    if(text != ""){
+        // console.log(text);
         text = text.replaceAll("enter", 'e');
         text = text.replaceAll("imes", 'i');
         text = text.replaceAll("ai", 'a');
         text = text.replaceAll("ober", 'o');
         text = text.replaceAll("ufat", 'u');   
         tdesencriptado = text;
-        textofinal(tdesencriptado);
-        return console.log(text);  
-        
+        // textofinal(tdesencriptado);
+        return console.log(text),true;   
     }else{
-        return console.log('Ingresa un mensaje');
+        // mandamos un alert en caso de que no haya ningun texto
+        // que desencriptar
+        return alert('Ingresa un mensaje');
     }
 }
 
-function filtro(text) {
-    let exeption = [ ":",",","."];
-    let i = 0;
-    while(i < text.length){
-        let t = text.charAt(i);
-        if(t === t.toUpperCase() & exeption.includes(t)){
-            // console.log(`aqui: ${t}`);
-            console.log("No pongas letras mayusculas ni palabras con acento");
-            limpiarCaja();
-            break;
-        }else{
-            if(t == "á" || t == "é" || t == "í" || t == "ó" || t == "ú" || t == "à" || t == "è" || t == "ò"){
-                // console.log('No aqui');
-                console.log("No pongas letras mayusculas ni palabras con acento");
+function filtro(text) {   
+    if(text != ""){
+        let exeption = [":",",","."];
+        let i = 0;
+        while(i < text.length){
+            let t = text.charAt(i);
+            if(t === t.toUpperCase() & exeption.includes(t)){
+                console.log(`aqui: ${t}`);
+                alert("No pongas letras mayusculas ni palabras con acento");
                 limpiarCaja();
                 break;
+            }else{
+                if(t == "á" || t == "é" || t == "í" || t == "ó" || t == "ú" || t == "à" || t == "è" || t == "ò"){
+                    console.log('No aqui');
+                    alert("No pongas letras mayusculas ni palabras con acento");
+                    limpiarCaja();
+                    break;
+                }
             }
+            i++;
+        }    
+        if(i == text.length){
+            console.log("La palabra esta bien");
+            return true;
         }
-        i++;
-    }    
-    if(i == text.length){
-        limpiarCaja();
-        console.log("La palabra esta bien");
-        encriptar(text);
-        return true;
-    }      
+        
+    }else{
+        return alert('Ingresa un mensaje');
+    }
+     
+}
+// Declaramos la funcion que cambia el texto para mostrar
+// los mensajes encriptados o desencriptados
+function textofinal(text){
+    // Agregar excepciones
+
+    // Quitamos la visibilidad de la imagen que esta arriba del
+    // boton
+    let vista = document.getElementById("m_neco");
+    vista.setAttribute("style",'visibility: hidden;');
+    // cambiamos el texto que esta arriba del boton
+    let header = document.querySelector('p.textfinal');
+    header.innerHTML = text;
+    return;
+}
+// Declaramos la funcion que limpia el textArea
+function limpiarCaja() {
+    // le asignamos un espacio en blanco al texto que tenga 
+    // el textArea
+    document.querySelector('#texto').value = '';
 }
 
-function limpiarCaja() {
-    document.querySelector('#texto').value = '';
+// Declaramos el boton de copiar
+function copiarContenido() {
+    // traemos los valores del texto y el boton
+    let texto = document.getElementById("texto2");
+    let botton = document.getElementById("input");
+    // Hacemos uso de la API para copiar un texto al portapapeles
+    navigator.clipboard.writeText(texto.textContent);
+    botton.textContent = "Copiado";
 }
