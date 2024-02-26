@@ -2,25 +2,30 @@
 // el texto encriptado y desencriptado
 let tencriptado = "";
 let tdesencriptado = "";
-// desiniciador();
-iniciador();
+
+let header = document.querySelector("header.header");
+let main = document.querySelector("main.main");
+let footer = document.querySelector("footer.footer")
+let letras = document.querySelector("section.intro");
+
+
+// iniciador();
 // Aqui iniciamos la pagina
 function iniciador(){
-    let header = document.querySelector("header.header");
-    let main = document.querySelector("main.main");
-    let footer = document.querySelector("footer.footer")
-    let letras = document.querySelector("section.intro");
-    // let vista = document.getElementById("m_neco");
+    letras.setAttribute("style",'visibility: visible; height:100vh;');
     header.setAttribute("style",'visibility: hidden;');
     main.setAttribute("style",'visibility: hidden;');
     footer.setAttribute("style",'visibility: hidden;');
-    letras.setAttribute("style",'visibility: visible;');
+    // letras.setAttribute("style",'visibility: visible;');
+    setTimeout(desiniciador, 8000);
 }
 
 
 function desiniciador(){
-    let letras = document.querySelector("section.intro");
-    letras.setAttribute("style",'height: 1px;')
+    header.setAttribute("style",'visibility: visible;');
+    main.setAttribute("style",'visibility: visible;');
+    footer.setAttribute("style",'visibility: visible;');
+    letras.setAttribute("style",'visibility: hidden; height:0px;');
 }
 // declaramos la funcion de el boton encriptar
 function btnEncriptar(text){
