@@ -8,25 +8,26 @@ let main = document.querySelector("main.main");
 let footer = document.querySelector("footer.footer")
 let letras = document.querySelector("section.intro");
 
-
-// iniciador();
+iniciador();
 // Aqui iniciamos la pagina
 function iniciador(){
     letras.setAttribute("style",'visibility: visible; height:100vh;');
-    header.setAttribute("style",'visibility: hidden;');
-    main.setAttribute("style",'visibility: hidden;');
-    footer.setAttribute("style",'visibility: hidden;');
+    header.setAttribute("style",'visibility: hidden;height:0px;');
+    main.setAttribute("style",'visibility: hidden;height:0px;');
+    footer.setAttribute("style",'visibility: hidden;height:0px;');
     // letras.setAttribute("style",'visibility: visible;');
     setTimeout(desiniciador, 8000);
 }
 
-
+// con esta funcion le adamos los valores iniciales a la pagina
 function desiniciador(){
     header.setAttribute("style",'visibility: visible;');
     main.setAttribute("style",'visibility: visible;');
     footer.setAttribute("style",'visibility: visible;');
     letras.setAttribute("style",'visibility: hidden; height:0px;');
 }
+
+
 // declaramos la funcion de el boton encriptar
 function btnEncriptar(text){
     // Adicionamos un filtro para evitar el ingreso de textos 
@@ -41,6 +42,8 @@ function btnEncriptar(text){
         }
     }
 }
+
+
 // declaramos la funcion de el boton desencriptar
 function btnDesencriptar(text){
     // Adicionamos un filtro para evitar el ingreso de textos 
@@ -52,8 +55,11 @@ function btnDesencriptar(text){
         textofinal(tdesencriptado);
         // limpiamos la caja del texto
         limpiarCaja();
+        // valoresIniciales();
     }
 }
+
+
 // Declaramos la funcion encriptar con el argumento text
 function encriptar(text){
     // Adicionamos un filtro para evitar el ingreso de textos 
@@ -75,6 +81,8 @@ function encriptar(text){
         return alert("Ingresa un mensaje"),true;
     }
 }
+
+
 // Declaramos la funcion desencriptar con el argumento text
 function desencriptar(text){
     // Adicionamos un filtro para evitar el ingreso de textos 
@@ -96,15 +104,17 @@ function desencriptar(text){
     }
 }
 
+// Funcion para filtrar el texto y saber si tiene mayusculas o caracteres especiales
 function filtro(text) {   
-    if(text != ""){
-        let exeption = [":",",","."];
+    if(text != "" & text != " "){
+        let exeption = /[A-Za-z0-9]/;
+        // let exeption = [":",",","."];
         let i = 0;
+
         while(i < text.length){
             let t = text.charAt(i);
-            if(t === t.toUpperCase() & exeption.includes(t)){
-                console.log(`aqui: ${t}`);
-                alert("No pongas letras mayusculas ni palabras con acento");
+            if(t == t.toUpperCase() & t != ' ' & t != exeption){
+                alert("No pongas letras mayusculas, palabras con acento, ni caracteres especiales");
                 limpiarCaja();
                 break;
             }else{
@@ -127,6 +137,8 @@ function filtro(text) {
     }
      
 }
+
+
 // Declaramos la funcion que cambia el texto para mostrar
 // los mensajes encriptados o desencriptados
 function textofinal(text){
@@ -141,12 +153,21 @@ function textofinal(text){
     header.innerHTML = text;
     return;
 }
+
+function valoresIniciales(){
+    let vista = document.getElementById("m_neco");
+    vista.setAttribute("style",'visibility: visible;');
+    let header = document.querySelector('p.textfinal');
+    header.innerHTML = "Ingresa el texto que deseas encriptar o desencriptar";
+}
+
 // Declaramos la funcion que limpia el textArea
 function limpiarCaja() {
     // le asignamos un espacio en blanco al texto que tenga 
     // el textArea
     document.querySelector('#texto').value = '';
 }
+
 
 // Declaramos el boton de copiar
 function copiarContenido() {
@@ -155,5 +176,6 @@ function copiarContenido() {
     let botton = document.getElementById("input");
     // Hacemos uso de la API para copiar un texto al portapapeles
     navigator.clipboard.writeText(texto.textContent);
-    botton.textContent = "Copiado";
+    alert("Copiado");
+    // botton.textContent = "Copiado";
 }
