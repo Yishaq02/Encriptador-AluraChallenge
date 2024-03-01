@@ -8,7 +8,7 @@ let main = document.querySelector("main.main");
 let footer = document.querySelector("footer.footer")
 let letras = document.querySelector("section.intro");
 
-iniciador();
+// iniciador();
 // Aqui iniciamos la pagina
 function iniciador(){
     letras.setAttribute("style",'visibility: visible; height:100vh;');
