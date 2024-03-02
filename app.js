@@ -16,7 +16,7 @@ function iniciador(){
     main.setAttribute("style",'visibility: hidden;height:0px;');
     footer.setAttribute("style",'visibility: hidden;height:0px;');
     // letras.setAttribute("style",'visibility: visible;');
-    setTimeout(desiniciador, 8000);
+    // setTimeout(desiniciador, 8000);
 }
 
 // con esta funcion le adamos los valores iniciales a la pagina

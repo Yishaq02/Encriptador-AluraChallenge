@@ -231,7 +231,7 @@ main{
 
 /* area 2 */
 
-.area2 {
+.area2{
     width: 572px;
     height: 800px;
     display: inline-block;
@@ -319,12 +319,9 @@ footer p{
 /* TELEFONOS */
 
 @media screen and (320px <= device-width <= 430px){
-    body{
-        background: red;
-    }
     main{
         width: 100%;
-        height: 100%;
+        height: 80%;
     }
 
     header img{
@@ -335,7 +332,8 @@ footer p{
 
     .area1{
         text-align: inherit;
-        width: 100%;
+        width: 85%;
+        /* width: 100%; */
         height: 380px;
     }
 
@@ -358,6 +356,50 @@ footer p{
 
     .botones .boton, #input{
         width: 40%;
+    }
+
+    .area2{
+        width: 100%;
+        height: 30%;
+    }
+
+    .divArea2{
+        width: 85%;
+        height: 100%;
+    }
+
+    .muñeco{
+        visibility: hidden;
+    }
+
+    .textfinal{
+        font-size: 1.2em;
+    }
+
+    .botonCopiar{
+        left: 32%;
+        top: 60%;
+    }
+
+    footer{
+        height: 10%;
+    }
+
+    footer p{
+        margin-top: 0;
+        font-size: 1em;
+        width: 85%;
+    }
+
+    .intro h1{
+        font-size: 2.5em;
+        width: 85%;
+    }
+
+    .intro h2{
+        font-size: 1em;
+        width: 85%;
+        top: 54%;
     }
 }
 
