@@ -137,6 +137,8 @@ header{
     width: 100%;
     /* width: 1920px; */
     height: 90px;
+    /* height: 15vh; */
+    /* justify-content: space-between; */
     text-align: left;
 }
 
@@ -402,5 +404,93 @@ footer p{
         top: 54%;
     }
 }
+
+@media screen and (min-width: 768px){
+    @media screen and (min-height: 1174px){
+        main{
+            width: 100%;
+            height: 80%;
+        }
+    
+        header img{
+            margin-top: 10px;
+            margin-left: 0;
+            padding: 10px;   
+        }
+    
+        .area1{
+            text-align: inherit;
+            width: 85%;
+            /* width: 100%; */
+            height: 380px;
+        }
+    
+        .texto-area{
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+    
+        .texto-area #texto{
+            font-size: 20px;
+            width: 90%;
+            height: 250px;
+        }
+    
+        .restricciones p{
+            font-size: 1em;
+        }
+    
+        .botones .boton, #input{
+            width: 40%;
+        }
+    
+        .area2{
+            width: 100%;
+            height: 30%;
+        }
+    
+        .divArea2{
+            width: 85%;
+            height: 100%;
+        }
+    
+        .muñeco{
+            visibility: hidden;
+        }
+    
+        .textfinal{
+            font-size: 1.2em;
+        }
+    
+        .botonCopiar{
+            left: 32%;
+            top: 60%;
+        }
+    
+        footer{
+            height: 10%;
+        }
+    
+        footer p{
+            margin-top: 0;
+            font-size: 1em;
+            width: 85%;
+        }
+    
+        .intro h1{
+            font-size: 2.5em;
+            width: 85%;
+        }
+    
+        .intro h2{
+            font-size: 1em;
+            width: 85%;
+            top: 54%;
+        }
+    } 
+}
+
 
 /* @media (375px = )) */
