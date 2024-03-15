@@ -11,19 +11,19 @@
 </head>
 <body>
     <header class="header">
-        <!-- <img class="Logo" src="imagenes/Logo.png" alt=""> -->
+        <img class="Logo" src="imagenes/Logo.png" alt="">
     </header>
     <main class="main">
         <section class="intro">
             <!-- <video src="videos/smoke.mp4" autoplay muted></video> -->
-            <h1>
+            <!-- <h1>
                 <span>A</span>
                 <span>L</span>
                 <span>U</span>
                 <span>R</span>
                 <span>A</span>
             </h1>
-            <h2>Challenge Encriptador</h2>
+            <h2>Challenge Encriptador</h2> -->
         </section>
         <section class="area1">
             <div class="texto-area">
@@ -42,17 +42,26 @@
 
         <section class="area2">
             <div class="divArea2">
-                <!-- <img src="imagenes/Rectangle.png" alt="" class="rectangulo" id="rec">
-                <img src="imagenes/Muñeco.png" alt="" class="muñeco" id="m_neco" > -->
-                <p class="textfinal" id="texto2">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <img src="imagenes/Rectangle.png" alt="" class="rectangulo" id="rec">
+                <div class="imagen2"><img src="imagenes/Muñeco.png" alt="" class="muñeco" id="m_neco" >
+                </div>
+                
+                <div class="textfinal">
+                    <p id="texto2">Ningun mensaje fue encontrado</p>
+                </div>
+                <div class="textfinal2">
+                    <p id="texto2">Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+                <!-- <p class="textfinal2" id="texto2">Ningun mensaje fue encontrado</p>
+                <p class="textfinal" id="texto2">Ingresa el texto que deseas encriptar o desencriptar</p> -->
                 <button class="botonCopiar" id="input" onclick="copiarContenido()">Copiar</button> 
             </div>
         </section>
     </main>
     <footer class="footer">
         <p>&#9824; Code by Isaac Atilano</p>
-        <a href="https://github.com/Yishaq02?tab=repositories"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
-        <a href=""><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+        <div><a href="https://github.com/Yishaq02?tab=repositories"><i style="font-size:24px" class="fa">&#xf09b;</i></a></div>
+        <div><a href=""><i style="font-size:24px" class="fa">&#xf08c;</i></a></div>
     </footer>
     <script src="app.js"></script> 
 </body>
