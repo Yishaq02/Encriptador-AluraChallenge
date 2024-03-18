@@ -95,7 +95,6 @@ function desencriptar(text){
         text = text.replaceAll("ober", 'o');
         text = text.replaceAll("ufat", 'u');   
         tdesencriptado = text;
-        // textofinal(tdesencriptado);
         return console.log(text),true;   
     }else{
         // mandamos un alert en caso de que no haya ningun texto
@@ -148,9 +147,24 @@ function textofinal(text){
     // boton
     let vista = document.getElementById("m_neco");
     vista.setAttribute("style",'visibility: hidden;');
-    // cambiamos el texto que esta arriba del boton
-    let header = document.querySelector('p.textfinal');
-    header.innerHTML = text;
+
+    let texto1 = document.getElementById("texto3");
+    texto1.setAttribute("style",'visibility: hidden;');
+
+    let altura = document.getElementById("textofinalId");
+    altura.setAttribute("style",'height:0;');
+
+    let texto2 = document.getElementById("texto2");
+    texto2.innerHTML = text;
+
+    let texto2Acomodo =document.getElementById("textofinal2Id");
+
+    texto2Acomodo.setAttribute("style",'botton:0;top:0');
+
+    let btn = document.getElementById("input");
+    btn.setAttribute("style",'visibility: visible;');
+
+
     return;
 }
 
