@@ -134,6 +134,7 @@ main section:nth-child(3){
 
 main section:nth-child(3) .divArea2 {
     position: relative;
+    
     padding: 1%;
     width: 100%;
     height: 98%;
@@ -425,9 +426,15 @@ footer div {
         }
         
         main section:nth-child(3){
-            width: 35vw;
+            width: 33vw;
             height: 90vh;
         }
+
+        main section:nth-child(3) .divArea2 {
+            margin-top: 1em;
+            padding: 0;
+        }
+
         main section:nth-child(3) .divArea2 .imagen2{
             height: 55%;
         }
@@ -443,12 +450,21 @@ footer div {
 
         main section:nth-child(3) .divArea2 .textfinal2{
             height: 40%;
-            bottom: 1em;
+            bottom: 0.5em;
             /* height: 40%; */
         }
 
         main section:nth-child(3) .divArea2 .textfinal2{
             font-size: 2em;
+        }
+
+        main section:nth-child(3) .divArea2 .botonCopiaCaja{
+            height: 10%;
+            bottom: 5em;
+        }
+
+        footer p{
+            font-size: 1.6em;
         }
     }
 }
@@ -489,8 +505,13 @@ footer div {
         }
         
         main section:nth-child(3){
-            width: 35vw;
+            width: 33vw;
             height: 90vh;
+        }
+
+        main section:nth-child(3) .divArea2 {
+            margin-top: 1em;
+            padding: 0;
         }
 
         main section:nth-child(3) .divArea2 .imagen2{
@@ -509,7 +530,7 @@ footer div {
 
         main section:nth-child(3) .divArea2 .textfinal2{
             height: 40%;
-            bottom: 1em;
+            bottom: 0.5em;
             /* height: 40%; */
         }
 
@@ -520,11 +541,20 @@ footer div {
 
         main section:nth-child(3) .divArea2 .textfinal2 p{
             position: absolute;
-            top: 0;
+            top: 2em;
             left: 0;
             right: 0;
             bottom: 0;
             margin: auto;   
+        }
+
+        main section:nth-child(3) .divArea2 .botonCopiaCaja{
+            height: 10%;
+            bottom: 5em;
+        }
+
+        footer p{
+            font-size: 1.6em;
         }
     }
 }

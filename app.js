@@ -154,6 +154,9 @@ function textofinal(text){
     let altura = document.getElementById("textofinalId");
     altura.setAttribute("style",'height:0;');
 
+    let altura2 = document.getElementById("imagen2Id");
+    altura2.setAttribute("style",'height:0;');
+
     let texto2 = document.getElementById("texto2");
     texto2.innerHTML = text;
 
